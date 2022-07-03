@@ -3,16 +3,22 @@ import Foundation
 public struct FUID: RawRepresentable {
     public var rawValue: String
     
-    public init(rawValue: String) {
+    public init?(rawValue: String) {
+        guard
+            !rawValue.isEmpty,
+            rawValue.allSatisfy({ alphabet.contains($0) })
+        else {
+            return nil
+        }
         self.rawValue = rawValue
     }
     
-    public init(_ string: String) {
+    public init?(_ string: String) {
         self.init(rawValue: string)
     }
     
     public init(uuid: UUID) {
-        self.init(rawValue: Base62.encode(uuid: uuid))
+        self.init(rawValue: Base62.encode(uuid: uuid))!
     }
     
     public init() {
@@ -47,6 +53,6 @@ extension FUID: Codable {
 
 extension FUID: ExpressibleByStringLiteral {
     public init(stringLiteral value: StringLiteralType) {
-        self.init(rawValue: value)
+        self.init(rawValue: value)!
     }
 }

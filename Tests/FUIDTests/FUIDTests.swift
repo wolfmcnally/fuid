@@ -26,7 +26,7 @@ final class FUIDTests: XCTestCase {
     func testFUID() {
         let fuidString = "2OoRTgKNblbnwE3X5RCTFq"
         let uuidString = "4EDD18E1-CDA7-4E9A-939D-7730A32054BA"
-        let fuid = FUID(fuidString)
+        let fuid = FUID(fuidString)!
         XCTAssertEqual(fuid.description, fuidString)
         
         let fuidJSON = fuid.jsonString
