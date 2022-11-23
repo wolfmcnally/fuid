@@ -39,6 +39,12 @@ extension FUID: CustomStringConvertible {
 extension FUID: Hashable {
 }
 
+extension FUID: Comparable {
+    public static func < (lhs: FUID, rhs: FUID) -> Bool {
+        lhs.rawValue.lexicographicallyPrecedes(rhs.rawValue)
+    }
+}
+
 extension FUID: Codable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
