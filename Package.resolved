@@ -12,10 +12,10 @@
     {
       "identity" : "swift-numberkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/objecthub/swift-numberkit.git",
+      "location" : "https://github.com/wolfmcnally/swift-numberkit.git",
       "state" : {
-        "revision" : "e8c1cb9e8220001a7efa857fea88c0bd762c56ea",
-        "version" : "2.4.1"
+        "revision" : "34a26297c200489779929b7fd7d4d30b63e87e69",
+        "version" : "2.4.3"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/wolfmcnally/WolfBase.git",
       "state" : {
-        "revision" : "883d3e868ab61b2001f2cbf4566bb5e72ab10603",
-        "version" : "4.7.0"
+        "revision" : "a739d553c600a203c4f84eb26ceb87d38b298456",
+        "version" : "5.0.0"
       }
     }
   ],
