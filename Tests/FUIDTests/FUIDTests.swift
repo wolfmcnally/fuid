@@ -37,4 +37,11 @@ final class FUIDTests: XCTestCase {
         
         XCTAssertEqual(fuid.uuid!.description, uuidString)
     }
+    
+    func testOrder() {
+        // Formerly used lexicographic ordering, but now uses numeric ordering, which is
+        // the same as the Rust implementation.
+        let fuids: [FUID] = ["BA", "BC", "JA", "JA2", "JE"]
+        XCTAssertEqual(fuids.sorted()†, "[BA, BC, JA, JE, JA2]")
+    }
 }

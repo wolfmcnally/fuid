@@ -1,16 +1,19 @@
 import Foundation
+import NumberKit
 
 public struct FUID: RawRepresentable {
-    public var rawValue: String
+    public let rawValue: String
+    public let value: BigInt
     
     public init?(rawValue: String) {
         guard
             !rawValue.isEmpty,
-            rawValue.allSatisfy({ alphabet.contains($0) })
+            let value = Base62.decodeToBigInt(rawValue)
         else {
             return nil
         }
         self.rawValue = rawValue
+        self.value = value
     }
     
     public init?(_ string: String) {
@@ -37,11 +40,14 @@ extension FUID: CustomStringConvertible {
 }
 
 extension FUID: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(value)
+    }
 }
 
 extension FUID: Comparable {
     public static func < (lhs: FUID, rhs: FUID) -> Bool {
-        lhs.rawValue.lexicographicallyPrecedes(rhs.rawValue)
+        lhs.value < rhs.value
     }
 }
 
@@ -53,7 +59,11 @@ extension FUID: Codable {
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
-        self.rawValue = try container.decode(String.self)
+        let rawValue = try container.decode(String.self)
+        guard let s = Self(rawValue: rawValue) else {
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Invalid FUID")
+        }
+        self = s
     }
 }
 
