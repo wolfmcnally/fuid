@@ -1,0 +1,42 @@
+{
+  "originHash" : "3e6fff6cb466982d4ca24626a926ede0f8b1f27daec57965aa18e5859c96f6fd",
+  "pins" : [
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-algorithms.git",
+      "state" : {
+        "revision" : "f6919dfc309e7f1b56224378b11e28bab5bccc42",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swift-numberkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/objecthub/swift-numberkit.git",
+      "state" : {
+        "revision" : "33af3f9011e45dcd8ee696492d30dbcd5a8a67f3",
+        "version" : "2.6.0"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics.git",
+      "state" : {
+        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "wolfbase",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wolfmcnally/WolfBase.git",
+      "state" : {
+        "revision" : "b2515098bb6f46a8c0386b383b0ed9282828d1c4",
+        "version" : "7.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
