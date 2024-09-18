@@ -1,4 +1,5 @@
 {
+  "originHash" : "6ec0db0fa7fdae2895bbb479acd8ad57fe56727a502baf25ebf6f26721338b15",
   "pins" : [
     {
       "identity" : "swift-algorithms",
@@ -12,10 +13,10 @@
     {
       "identity" : "swift-numberkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/wolfmcnally/swift-numberkit.git",
+      "location" : "https://github.com/objecthub/swift-numberkit.git",
       "state" : {
-        "revision" : "34a26297c200489779929b7fd7d4d30b63e87e69",
-        "version" : "2.4.3"
+        "revision" : "33af3f9011e45dcd8ee696492d30dbcd5a8a67f3",
+        "version" : "2.6.0"
       }
     },
     {
@@ -32,10 +33,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/wolfmcnally/WolfBase.git",
       "state" : {
-        "revision" : "91c8cad45e6325ab76db1b5b60c5f6616d52a0cb",
-        "version" : "6.0.0"
+        "revision" : "b2515098bb6f46a8c0386b383b0ed9282828d1c4",
+        "version" : "7.0.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

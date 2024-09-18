@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 6.0
 
 import PackageDescription
 
@@ -10,8 +10,8 @@ let package = Package(
             targets: ["FUID"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/wolfmcnally/swift-numberkit.git", .upToNextMajor(from: "2.4.3")),
-        .package(url: "https://github.com/wolfmcnally/WolfBase.git", .upToNextMajor(from: "6.0.0")),
+        .package(url: "https://github.com/objecthub/swift-numberkit.git", .upToNextMajor(from: "2.6.0")),
+        .package(url: "https://github.com/wolfmcnally/WolfBase.git", .upToNextMajor(from: "7.0.0")),
     ],
     targets: [
         .target(
