@@ -1,6 +1,5 @@
 import Foundation
 import NumberKit
-import WolfBase
 
 // 2OgGZdF0XpQ7nuoC99CDxX
 
@@ -88,6 +87,6 @@ extension Base62 {
             return nil
         }
         
-        return deserialize(UUID.self, data)
+        return deserializeUUID(data)
     }
 }
